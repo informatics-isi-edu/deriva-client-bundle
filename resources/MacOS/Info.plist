@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict><key>CFBundleIdentifier</key>
+<string>edu.isi.isrd.deriva.client.tools</string>
+<key>CFBundleShortVersionString</key>
+<string>0.1.0</string>
+<key>CFBundleIconFile</key>
+<string>icon.icns</string>
+<key>CFBundleExecutable</key>
+<string>MacOS/deriva-auth</string>
+<key>LSBackgroundOnly</key>
+<string>0</string>
+<key>NSPrincipalClass</key>
+<string>NSApplication</string>
+<key>CFBundleInfoDictionaryVersion</key>
+<string>6.0</string>
+<key>CFBundleDisplayName</key>
+<string>DERIVA Client Tools</string>
+<key>NSHighResolutionCapable</key>
+<string>True</string>
+<key>CFBundleName</key>
+<string>DERIVA Client Tools</string>
+<key>CFBundlePackageType</key>
+<string>APPL</string>
+</dict>
+</plist>

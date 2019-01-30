@@ -1,0 +1,10 @@
+DERIVA Client Tools is a application software bundle for working with the DERIVA platform (deriva.isi.edu).
+
+It contains both GUI applications and command-line applications.
+
+The DERIVA Authentication Agent is a GUI application which authenticates to DERIVA services and runs in the background,
+providing authentication services to other locally installed client applications.
+
+The DERIVA Upload Utility is a GUI application that provides batch upload of data and file assets to DERIVA servers.
+
+DERIVA Command Line Applications opens a Terminal shell environment from which the various DERIVA CLI tools can be launched.
