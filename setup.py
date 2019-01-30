@@ -52,6 +52,7 @@ def get_bdist_msi_options():
     return {
         "add_to_path": True,
         "upgrade_code": __version__,
+        "target_name": "DERIVA-Client-Tools-%s-win" % __version__,
         "install_icon": "resources\\images\\deriva-star.ico"
     }
 

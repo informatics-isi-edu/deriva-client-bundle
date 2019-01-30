@@ -27,5 +27,5 @@ python setup.py bdist_msi
 ```sh
 python setup.py bdist_mac
 packagesbuild --verbose "packaging/MacOS/Deriva Client Tools.pkgproj"
-hdiutil create -fs HFSX -format UDZO -imagekey zlib-level=9 -srcfolder "./build/Deriva Client Tools.mpkg" -volname "DERIVA Client Tools-0.1.0" "./build/DERIVA Client Tools-0.1.0"
+hdiutil create -fs HFSX -format UDZO -imagekey zlib-level=9 -srcfolder "./build/Deriva Client Tools.mpkg" -volname "DERIVA Client Tools-0.1.0" "./build/DERIVA-Client-Tools-0.1.0-osx"
 ```
