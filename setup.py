@@ -9,7 +9,10 @@
 from setuptools import setup, find_packages
 import re
 import io
+import os
 import sys
+import opcode
+from distutils.sysconfig import get_python_lib
 from cx_Freeze import setup, Executable
 
 from version import __version__
@@ -24,9 +27,6 @@ def get_target_extension():
 
 
 def get_distutils_path():
-    import distutils
-    import opcode
-    import os
     return os.path.join(os.path.dirname(opcode.__file__), 'distutils')
 
 
@@ -70,6 +70,7 @@ setup(
             "optimize": 1,
             "namespace_packages": ["deriva", "deriva.utils", "deriva.utils.catalog"],
             "packages": ["pkg_resources._vendor",
+                         "bdbag.fetch.resolvers",
                          "goodtables",
                          "boto3"],
             "includes": ["atexit",
@@ -130,15 +131,18 @@ setup(
                    base="Console"),
 
         # bdbag CLI Applications
-        Executable("../bdbag/bdbag/bdbag_cli.py",
+        Executable(get_python_lib() + "/bdbag/bdbag_cli.py",
                    targetName="bdbag" + get_target_extension(),
                    base="Console"),
-        Executable("../bdbag/bdbag/bdbag_utils.py",
+        Executable(get_python_lib() + "/bdbag/bdbag_utils.py",
                    targetName="bdbag-utils" + get_target_extension(),
                    base="Console"),
     ],
     requires=[
+        'distutils',
         'io',
+        'opcode',
+        'os',
         're',
         'sys',
         'cx_Freeze'

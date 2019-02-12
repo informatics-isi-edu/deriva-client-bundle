@@ -8,7 +8,7 @@ Build environment installation prerequisites:
 
 * A Python 3.5 or greater virtualenv
 * cx_Freeze >= 6.0b1: `pip install git+https://github.com/anthony-tuininga/cx_Freeze.git`
-* PyQT5: `pip install PyQt5`
+* PyQT5: `pip install PyQt5==5.11.3`
     * MacOSX Only: `ln -s <venv>/lib/python3.5/site-packages/PyQt5/Qt/lib/* <venv>/lib/`
 * bdbag: `pip install bdbag[boto,globus]`
 * deriva-py: `pip install --upgrade git+https://github.com/informatics-isi-edu/deriva-py.git`
