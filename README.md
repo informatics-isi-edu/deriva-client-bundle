@@ -6,7 +6,7 @@
 
 Build environment installation prerequisites:
 
-* A Python 3.6 or greater virtualenv
+* A Python 3.5.4 virtualenv
 * cx_Freeze >= 6.0b1: `pip install git+https://github.com/anthony-tuininga/cx_Freeze.git`
 * PyQT5: `pip install PyQt5==5.11.3`
     * MacOSX Only: `ln -s <venv>/lib/python3.6/site-packages/PyQt5/Qt/lib/* <venv>/lib/`
