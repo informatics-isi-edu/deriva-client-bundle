@@ -631,7 +631,7 @@
 						<key>BACKGROUND_PATH</key>
 						<dict>
 							<key>PATH</key>
-							<string>../../../deriva-client-proto/resources/images/deriva-h50.png</string>
+							<string>../../../deriva-client-bundle/resources/images/deriva-h50.png</string>
 							<key>PATH_TYPE</key>
 							<integer>1</integer>
 						</dict>
@@ -646,7 +646,7 @@
 				<key>BACKGROUND_PATH</key>
 				<dict>
 					<key>PATH</key>
-					<string>../../../deriva-client-proto/resources/images/deriva-h50.png</string>
+					<string>../../../deriva-client-bundle/resources/images/deriva-h50.png</string>
 					<key>PATH_TYPE</key>
 					<integer>1</integer>
 				</dict>
