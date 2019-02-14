@@ -35,7 +35,7 @@ when installing into the system Python location via `pip` on Linux/MacOSX,
 the commands must be run as root or the  `sudo` command must be prefixed
 to the command line..
 
-##### 1. Install PyQt5
+##### 1. Install __PyQt5__
 
 For the DERIVA GUI utilities (`deriva-qt`), the PyQt5 software package is required.
 Windows and MacOSX users can install PyQt5 via `pip`.
@@ -50,7 +50,7 @@ package management system.
     ```sh
     sudo dnf install python3-qt5 python3-qt5-webengine python3-devel
     ```
-* `Ubuntu` (18.04 or greater) or Debian (9 or greater):
+* `Ubuntu` (18.04 or greater) or `Debian` (9 or greater):
     ```sh
     sudo apt-get install -y python3-pyqt5 python3-pyqt5.qtwebengine
     ```
@@ -67,13 +67,13 @@ package management system.
 
 ##### 2. Install other dependencies via `pip`
 
-* bdbag: `pip3 install bdbag[boto,globus]`
+* __bdbag__: `pip3 install bdbag[boto,globus]`
 
 ##### 3. Install DERIVA software from GitHub source
 
-* deriva-py: `pip3 install --upgrade git+https://github.com/informatics-isi-edu/deriva-py.git`
-* deriva-catalog-manage: `pip3 install --upgrade git+https://github.com/informatics-isi-edu/deriva-catalog-manage.git`
-* deriva-qt (requires Python3 and PyQt5): `pip3 install --upgrade git+https://github.com/informatics-isi-edu/deriva-qt.git`
+* __deriva-py__: `pip3 install --upgrade git+https://github.com/informatics-isi-edu/deriva-py.git`
+* __deriva-catalog-manage__: `pip3 install --upgrade git+https://github.com/informatics-isi-edu/deriva-catalog-manage.git`
+* __deriva-qt__ (requires Python3 and PyQt5): `pip3 install --upgrade git+https://github.com/informatics-isi-edu/deriva-qt.git`
 
 ## Creating binary distributions of DERIVA Client Tools
 Self installing binary "bundles" for Windows and MacOSX can be generated
@@ -84,14 +84,14 @@ using the following procedure.
 Build environment installation prerequisites:
 
 * A Python 3.5.4 virtualenv
-* cx_Freeze >= 6.0b1: `pip install git+https://github.com/anthony-tuininga/cx_Freeze.git`
-* PyQT5: `pip install PyQt5==5.11.3`
+* __cx_Freeze__ >= 6.0b1: `pip install git+https://github.com/anthony-tuininga/cx_Freeze.git`
+* __PyQT5__: `pip install PyQt5==5.11.3`
     * MacOSX Only: `ln -s <absolute path to venv basedir>/lib/python3.6/site-packages/PyQt5/Qt/lib/* <absolute path to venv basedir>/lib/`
-* bdbag: `pip install bdbag[boto,globus]`
-* deriva-py: `pip install --upgrade git+https://github.com/informatics-isi-edu/deriva-py.git`
-* deriva-qt: `pip install --upgrade git+https://github.com/informatics-isi-edu/deriva-qt.git`
-* deriva-catalog-manage: `pip install --upgrade git+https://github.com/informatics-isi-edu/deriva-catalog-manage.git`
-* Packages (MacOSX only): http://s.sudre.free.fr/Software/files/Packages.dmg
+* __bdbag__: `pip install bdbag[boto,globus]`
+* __deriva-py__: `pip install --upgrade git+https://github.com/informatics-isi-edu/deriva-py.git`
+* __deriva-qt__: `pip install --upgrade git+https://github.com/informatics-isi-edu/deriva-qt.git`
+* __deriva-catalog-manage__: `pip install --upgrade git+https://github.com/informatics-isi-edu/deriva-catalog-manage.git`
+* __Packages__ (MacOSX only): http://s.sudre.free.fr/Software/files/Packages.dmg
 
 ##### Bundling
 The bundling process uses [`cx_Freeze`](https://github.com/anthony-tuininga/cx_Freeze)
