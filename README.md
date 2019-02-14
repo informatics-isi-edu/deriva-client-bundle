@@ -11,7 +11,7 @@ The DERIVA Client Tools are a set of software packages (CLI and GUI), that allow
 ## Installing DERIVA Client Tools from binaries
 Binary installer packages for Windows and MacOSX are currently provided.
 
-Offical release-stream installers can be found
+Official release-stream installers can be found
 [here](https://github.com/informatics-isi-edu/deriva-client-bundle/releases).
 
 Automatically generated installer builds (from the GitHub master branch)
@@ -23,6 +23,10 @@ Build environment installation prerequisites:
 
 * A Python 3.5.4 or greater installation (or virtualenv) is required for
 using the GUI tools (`deriva-qt`). Otherwise, Python 2.7 or greater is sufficient.
+* The most recent versions of pip, setuptools, and wheel installed.
+    ```sh
+    pip3 install –upgrade pip, setuptools, wheel
+    ```
 
 #### Installation sequence
 
