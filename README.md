@@ -33,19 +33,19 @@ Windows and MacOSX users can install PyQt5 via `pip`.
 Linux users should install PyQt5 from their OS distribution software
 package management system.
 
-* Windows (7 or greater) / MacOSX (10.11 or greater):
+* `Windows` (7 or greater) / `MacOSX` (10.11 or greater):
     ```sh
     pip3 install PyQt5==5.11.3
     ```
-* Fedora (27 or greater):
+* `Fedora` (27 or greater):
     ```sh
     sudo dnf install python3-qt5 python3-qt5-webengine python3-devel
     ```
-* Ubuntu (18.04 or greater) or Debian (9 or greater):
+* `Ubuntu` (18.04 or greater) or Debian (9 or greater):
     ```sh
     sudo apt-get install -y python3-pyqt5 python3-pyqt5.qtwebengine
     ```
-* CentOS (7 or greater), others:
+* `CentOS` (7 or greater), others:
 
     For Centos7 (and other distros) that do not provide a package manager
     based distribution of Python3 PyQt5 bindings, the DERIVA GUI components are
