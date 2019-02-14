@@ -11,11 +11,14 @@ The DERIVA Client Tools are a set of software packages (CLI and GUI), that allow
 ## Installing DERIVA Client Tools from binaries
 Binary installer packages for Windows and MacOSX are currently provided.
 
-Official release-stream installers can be found
+* Official release-stream installers can be found
 [here](https://github.com/informatics-isi-edu/deriva-client-bundle/releases).
 
-Automatically generated installer builds (from the GitHub master branch)
-can be found [here](http://buildbot.isrd.isi.edu/~buildbot/deriva-client-bundle/).
+* Automatically generated installer builds, driven by commits to master branch of
+[`deriva-py`](https://github.com/informatics-isi-edu/deriva-py),
+[`deriva-qt`](https://github.com/informatics-isi-edu/deriva-qt),
+[`deriva-catalog-manage`](https://github.com/informatics-isi-edu/deriva-catalog-manage)
+and this repository can be found [here](http://buildbot.isrd.isi.edu/~buildbot/deriva-client-bundle/).
 
 ## Installing DERIVA Client Tools from source
 
@@ -25,7 +28,7 @@ Build environment installation prerequisites:
 using the GUI tools (`deriva-qt`). Otherwise, Python 2.7 or greater is sufficient.
 * The most recent versions of pip, setuptools, and wheel installed.
     ```sh
-    pip3 install –upgrade pip, setuptools, wheel
+    pip3 install –-upgrade pip, setuptools, wheel
     ```
 
 #### Installation sequence
@@ -37,13 +40,13 @@ generally present on systems where both Python2 and Python3 are installed.
 If this does not apply to your system, use `pip` instead. Also note that
 when installing into the system Python location via `pip` on Linux/MacOSX,
 the commands must be run as root or the  `sudo` command must be prefixed
-to the command line..
+to the command line.
 
-##### 1. Install __PyQt5__
+##### 1. Install __PyQt5__:
 
 For the DERIVA GUI utilities (`deriva-qt`), the PyQt5 software package is required.
 Windows and MacOSX users can install PyQt5 via `pip`.
-Linux users should install PyQt5 from their OS distribution software
+Linux users should install PyQt5 from their OS distribution's software
 package management system.
 
 * `Windows` (7 or greater) / `MacOSX` (10.11 or greater):
@@ -61,19 +64,20 @@ package management system.
 * `CentOS` (7 or greater), others:
 
     For Centos7 (and other distros) that do not provide a package manager
-    based distribution of Python3 PyQt5 bindings, the DERIVA GUI components are
-    not officially supported. NOTE: It is possible to install the
+    based distribution of the Python3 PyQt5 bindings, the DERIVA GUI components are
+    not officially supported. NOTE: It is possible to install the PyQt5
     `manylinux1_x86_64` wheel via `pip`, and while the GUI software
-    components may function properly, they have not been thoroughly tested.
+    components may function properly with this package, they have not
+    been thoroughly tested.
     ```sh
     pip3 install PyQt5==5.11.3
     ```
 
-##### 2. Install other dependencies via `pip`
+##### 2. Install other dependencies via `pip`:
 
 * __bdbag__: `pip3 install bdbag[boto,globus]`
 
-##### 3. Install DERIVA software from GitHub source
+##### 3. Install DERIVA software from GitHub source:
 
 * __deriva-py__: `pip3 install --upgrade git+https://github.com/informatics-isi-edu/deriva-py.git`
 * __deriva-catalog-manage__: `pip3 install --upgrade git+https://github.com/informatics-isi-edu/deriva-catalog-manage.git`
@@ -89,7 +93,7 @@ Build environment installation prerequisites:
 
 * A Python 3.5.4 virtualenv
 * __cx_Freeze__ >= 6.0b1: `pip install git+https://github.com/anthony-tuininga/cx_Freeze.git`
-* __PyQT5__: `pip install PyQt5==5.11.3`
+* __PyQt5__: `pip install PyQt5==5.11.3`
     * MacOSX Only: `ln -s <absolute path to venv basedir>/lib/python3.6/site-packages/PyQt5/Qt/lib/* <absolute path to venv basedir>/lib/`
 * __bdbag__: `pip install bdbag[boto,globus]`
 * __deriva-py__: `pip install --upgrade git+https://github.com/informatics-isi-edu/deriva-py.git`
@@ -99,11 +103,11 @@ Build environment installation prerequisites:
 
 ##### Bundling
 The bundling process uses [`cx_Freeze`](https://github.com/anthony-tuininga/cx_Freeze)
-to "freeze" the Python environment and installed software and package it
-into installer packages that can be easily redistributed and installed by end users.
+to "freeze" the Python environment and installed software and package everything
+into a single application that can be redistributed to (and easily installed
+by) end users.
 
-Run the bundling commands from within the root of the `deriva-client-bundle`
-source directory.
+Run the bundling commands from within the root of the `deriva-client-bundle` source directory.
 
 ###### Windows installer
 
