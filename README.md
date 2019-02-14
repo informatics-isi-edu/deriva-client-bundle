@@ -8,6 +8,15 @@ The DERIVA Client Tools are a set of software packages (CLI and GUI), that allow
 2. Bulk import and export of catalog assets and (meta) data.
 3. Catalog configuration and administration.
 
+## Installing DERIVA Client Tools from binaries
+Binary installer packages for Windows and MacOSX are currently provided.
+
+Offical release-stream installers can be found
+[here](https://github.com/informatics-isi-edu/deriva-client-bundle/releases).
+
+Automatically generated installer builds (from the GitHub master branch)
+can be found [here](http://buildbot.isrd.isi.edu/~buildbot/deriva-client-bundle/).
+
 ## Installing DERIVA Client Tools from source
 
 Build environment installation prerequisites:
