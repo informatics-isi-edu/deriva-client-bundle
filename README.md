@@ -1,7 +1,7 @@
 # DERIVA Client Tools
 
 [![Build Status: Windows](http://buildbot.isrd.isi.edu/badges/deriva-client-bundle-Windows.svg?left_text=Build%20Status:%20Windows)](http://buildbot.isrd.isi.edu/#/)
-[![Build Status: MacOSX](http://buildbot.isrd.isi.edu/badges/deriva-client-bundle-MacOSX.svg?left_text=Build%20Status:%20MacOSX)](http://buildbot.isrd.isi.edu/#/)
+[![Build Status: MacOSX](http://buildbot.isrd.isi.edu/badges/deriva-client-bundle-MacOS.svg?left_text=Build%20Status:%20MacOSX)](http://buildbot.isrd.isi.edu/#/)
 
 The DERIVA Client Tools are a set of software packages (CLI and GUI), that allow users to interact with DERIVA platform servers. These tools provide functions such as:
 1. Authentication services for programmatic and non browser-based access.
