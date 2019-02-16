@@ -24,64 +24,127 @@ and this repository can be found [here](http://buildbot.isrd.isi.edu/~buildbot/d
 
 Build environment installation prerequisites:
 
-* A Python 3.5.4 or greater installation (or virtualenv) is required for
-using the GUI tools (`deriva-qt`). Otherwise, Python 2.7 or greater is sufficient.
-* The most recent versions of pip, setuptools, and wheel installed.
-    ```sh
-    pip3 install –-upgrade pip, setuptools, wheel
-    ```
+* A Python 3.5.4 or greater installation (or virtual environment) is required for
+using the GUI tools (`deriva-qt`). Otherwise, Python 2.7 or greater is
+sufficient, though Python 3.5.4 or greater is _recommended_.
+* For MacOSX and Linux systems which include Python as a core part of the
+operating system, it is _highly recommended_ to install this software
+into a _virtual environment_, so that it does not interfere or conflict
+with the operating system's Python installation. The native Python3
+`venv` module, the `virtualenv` package from PyPi, or the
+[Anaconda Distribution](https://www.anaconda.com/distribution/)
+environment are all suitable.
+
+* The most recent versions of `git`, `pip`, `setuptools`, and `wheel`
+are recommended. If these components are already installed, updating them
+to the latest versions available is _optional_.
+
+    * `Windows` (7 or greater) / `MacOSX` (10.11 or greater):
+
+        1. Download and install `git` from [here](https://git-scm.com).
+        2. For non-virtual environments:
+            ```sh
+            pip3 install –-upgrade pip, setuptools, wheel
+            ```
+
+    * `Fedora` (28 or greater) for non-virtual environments:
+        ```sh
+        sudo dnf install git python3-pip python3-setuptools python3-wheel
+        ```
+
+    * `Ubuntu` (18.04 or greater) or `Debian` (9 or greater) for non-virtual environments:
+        ```sh
+        sudo apt-get install git python3-pip python3-setuptools python3-wheel
+        ```
+
+    *  Python3 virtual environments (any OS):
+        ```sh
+        pip install –-upgrade pip, setuptools, wheel
+        ```
+
+* Important note when using `pip` to install software into system Python locations.
+Many newer Linux (as well as MacOSX) distributions contain both Python2
+and Python3 installed alongside each other. In these environments, both
+the python interpreter and `pip` are symlinked to the appropriate version,
+with `python` and `pip` generally linked to the Python2 versions.
+Python3 versions are commonly accessed via `python3` and `pip3`.
+If you are working outside of a Python3 virtual environment and installing
+either to the system Python location (not recommended) or a user-based
+location (e.g. with the `pip` `--user` argument), then you _must_
+substitute `pip3` for `pip` when issuing `pip` installation commands.
+Also note that when installing into the system Python location via
+`pip` on Linux/MacOSX, the commands must be run as root or the  `sudo`
+command must be prefixed to the command line.
 
 #### Installation sequence
 
 Follow the installation sequence below. If the DERIVA GUI utilities
 (`deriva-qt`) are not required, the PyQt5 installation step may be skipped.
-The `pip` commands listed below use the `pip3` executable name, which is
-generally present on systems where both Python2 and Python3 are installed.
-If this does not apply to your system, use `pip` instead. Also note that
-when installing into the system Python location via `pip` on Linux/MacOSX,
-the commands must be run as root or the  `sudo` command must be prefixed
-to the command line.
 
 ##### 1. Install __PyQt5__:
 
-For the DERIVA GUI utilities (`deriva-qt`), the PyQt5 software package is required.
-Windows and MacOSX users can install PyQt5 via `pip`.
-Linux users should install PyQt5 from their OS distribution's software
-package management system.
+For the DERIVA GUI utilities (`deriva-qt`), the PyQt5 (with WebEngine)
+software package is required. For Linux 64-bit variants, Windows x86_64
+variants, and MacOSX 64-bit variants, `pip`-based installation of the
+PyPi wheel distribution is recommended.  Linux users who wish to install
+PyQt5 into the system Python (not recommended) should use the package
+manager provided by the operating system instead of `pip`.
 
-* `Windows` (7 or greater) / `MacOSX` (10.11 or greater):
+*  Python3 virtual environments (any OS):
     ```sh
-    pip3 install PyQt5==5.11.3
+    pip install pyqtwebengine
     ```
-* `Fedora` (27 or greater):
+* `Windows` (7 or greater):
     ```sh
-    sudo dnf install python3-qt5 python3-qt5-webengine python3-devel
+    pip3 install pyqtwebengine
     ```
-* `Ubuntu` (18.04 or greater) or `Debian` (9 or greater):
+* `MacOSX` (10.11 or greater):
     ```sh
-    sudo apt-get install -y python3-pyqt5 python3-pyqt5.qtwebengine
+    sudo pip3 install pyqtwebengine
     ```
-* `CentOS` (7 or greater), others:
+* `Fedora` (27 or greater) for system Python installation:
+    ```sh
+    sudo dnf install python3-qt5-webengine
+    ```
+* `Ubuntu` (18.04 or greater) or `Debian` (9 or greater) for system Python installation:
+    ```sh
+    sudo apt-get install python3-pyqt5.qtwebengine
+    ```
+* `CentOS` (7 or greater):
 
-    For Centos7 (and other distros) that do not provide a package manager
-    based distribution of the Python3 PyQt5 bindings, the DERIVA GUI components are
-    not officially supported. NOTE: It is possible to install the PyQt5
-    `manylinux1_x86_64` wheel via `pip`, and while the GUI software
-    components may function properly with this package, they have not
-    been thoroughly tested.
-    ```sh
-    pip3 install PyQt5==5.11.3
-    ```
+    For Centos7, which does not make an installation of Python3 available
+    through it's package manager, it is recommended to install Python3 and
+    create a virtual environment following the procedures outlined
+    [here](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-centos-7).
+    After a successful installation of Python3 and activation of a
+    Python 3 virtual envirionment, simply follow the instructions for
+    installing the PyQt5 WebEngine software into a virtual environment
+    as outlined in this document.
+
+* Other Linux 64-bit:
+    Other Linux 64-bit distributions have not been tested. However, the
+    software may function correctly on these systems. The recommend
+    approach for these systems is to create a Python3 virtual environment
+    and install the PyQt5 WebEngine software into that virtual
+    environment as outlined in this document.
 
 ##### 2. Install other dependencies via `pip`:
 
-* __bdbag__: `pip3 install bdbag[boto,globus]`
+* __bdbag__: `pip install bdbag[boto,globus]`
+
+`NOTE`: Do not forget to substitute `pip3` for `pip` if you are __NOT__
+installing to a Python3 virtual environment and using a system that
+provides both Python2 and Python3.
 
 ##### 3. Install DERIVA software from GitHub source:
 
-* __deriva-py__: `pip3 install --upgrade git+https://github.com/informatics-isi-edu/deriva-py.git`
-* __deriva-catalog-manage__: `pip3 install --upgrade git+https://github.com/informatics-isi-edu/deriva-catalog-manage.git`
-* __deriva-qt__ (requires Python3 and PyQt5): `pip3 install --upgrade git+https://github.com/informatics-isi-edu/deriva-qt.git`
+* __deriva-py__: `pip install git+https://github.com/informatics-isi-edu/deriva-py.git`
+* __deriva-catalog-manage__: `pip install git+https://github.com/informatics-isi-edu/deriva-catalog-manage.git`
+* __deriva-qt__ (requires Python3 and PyQt5 WebEngine): `pip install git+https://github.com/informatics-isi-edu/deriva-qt.git`
+
+`NOTE`: Do not forget to substitute `pip3` for `pip` if you are __NOT__
+installing to a Python3 virtual environment and using a system that
+provides both Python2 and Python3.
 
 ## Creating binary distributions of DERIVA Client Tools
 Self installing binary "bundles" for Windows and MacOSX can be generated
@@ -93,7 +156,7 @@ Build environment installation prerequisites:
 
 * A Python 3.5.4 virtualenv
 * __cx_Freeze__ >= 6.0b1: `pip install git+https://github.com/anthony-tuininga/cx_Freeze.git`
-* __PyQt5__: `pip install PyQt5==5.11.3`
+* __PyQt5 WebEngine__: `pip install pyqtwebengine`
     * MacOSX Only: `ln -s <absolute path to venv basedir>/lib/python3.6/site-packages/PyQt5/Qt/lib/* <absolute path to venv basedir>/lib/`
 * __bdbag__: `pip install bdbag[boto,globus]`
 * __deriva-py__: `pip install --upgrade git+https://github.com/informatics-isi-edu/deriva-py.git`
