@@ -4,7 +4,7 @@
 <dict><key>CFBundleIdentifier</key>
 <string>edu.isi.isrd.deriva.client.tools</string>
 <key>CFBundleShortVersionString</key>
-<string>0.1.5</string>
+<string>0.2.0</string>
 <key>CFBundleIconFile</key>
 <string>icon.icns</string>
 <key>CFBundleExecutable</key>
