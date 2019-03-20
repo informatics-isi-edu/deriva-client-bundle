@@ -143,8 +143,9 @@ setup(
     ],
     install_requires=[
         'setuptools>=20.2',
-        'deriva>=0.8.0',
-        'deriva.qt>=0.8.0',
+        'deriva>=0.8.1',
+        'deriva.qt>=0.8.1',
+        'deriva-catalog-manage>=0.2.0'
     ],
     license='GNU GPL 3.0',
     classifiers=[
