@@ -58,9 +58,9 @@ def get_bdist_msi_options():
 
 
 setup(
-    name="DERIVA Client Tools",
-    description="Client Applications for the DERIVA Platform",
-    url='https://github.com/informatics-isi-edu/deriva-client',
+    name='DERIVA Client Bundle',
+    description='Bundled client application suite for the DERIVA Platform',
+    url='https://github.com/informatics-isi-edu/deriva-client-bundle',
     maintainer='USC Information Sciences Institute, Informatics Systems Research Division',
     maintainer_email='isrd-support@isi.edu',
     version=__version__,
@@ -123,7 +123,7 @@ setup(
         Executable("../deriva-catalog-manage/deriva/utils/catalog/manage/dump_catalog.py",
                    targetName="deriva-catalog-dump" + get_target_extension(),
                    base="Console"),
-        Executable("../deriva-catalog-manage/deriva/utils/catalog/manage/configure_catalog.py",
+        Executable("../deriva-catalog-manage/deriva/utils/catalog/components/configure_catalog.py",
                    targetName="deriva-catalog-config" + get_target_extension(),
                    base="Console"),
         Executable("../deriva-catalog-manage/deriva/utils/catalog/manage/deriva_csv.py",
@@ -142,10 +142,9 @@ setup(
         'cx_Freeze'
     ],
     install_requires=[
-        'setuptools>=20.2',
-        'deriva>=0.8.1',
-        'deriva-qt>=0.8.1',
-        'deriva-catalog-manage>=0.2.0'
+        'deriva==0.8.2',
+        'deriva-qt==0.8.2',
+        'deriva-catalog-manage==0.3.0'
     ],
     license='GNU GPL 3.0',
     classifiers=[
