@@ -123,7 +123,7 @@ setup(
         Executable("../deriva-catalog-manage/deriva/utils/catalog/manage/dump_catalog.py",
                    targetName="deriva-catalog-dump" + get_target_extension(),
                    base="Console"),
-        Executable("../deriva-catalog-manage/deriva/utils/catalog/components/configure_catalog.py",
+        Executable("../deriva-catalog-manage/deriva/utils/catalog/components/deriva_catalog.py",
                    targetName="deriva-catalog-config" + get_target_extension(),
                    base="Console"),
         Executable("../deriva-catalog-manage/deriva/utils/catalog/manage/deriva_csv.py",
