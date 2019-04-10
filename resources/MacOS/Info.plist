@@ -4,11 +4,11 @@
 <dict><key>CFBundleIdentifier</key>
 <string>edu.isi.isrd.deriva.client.tools</string>
 <key>CFBundleShortVersionString</key>
-<string>0.3.0</string>
+<string>0.4.0</string>
 <key>CFBundleIconFile</key>
 <string>icon.icns</string>
 <key>CFBundleExecutable</key>
-<string>MacOS/deriva-auth</string>
+<string>MacOS/about-deriva-client-tools</string>
 <key>LSBackgroundOnly</key>
 <string>0</string>
 <key>NSPrincipalClass</key>

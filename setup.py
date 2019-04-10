@@ -7,11 +7,10 @@
 """
 
 from setuptools import setup, find_packages
-import re
-import io
 import os
 import sys
 import opcode
+import subprocess
 from distutils.sysconfig import get_python_lib
 from cx_Freeze import setup, Executable
 
@@ -30,7 +29,17 @@ def get_distutils_path():
     return os.path.join(os.path.dirname(opcode.__file__), 'distutils')
 
 
+def get_installed_file_path(path):
+    return os.path.abspath(get_python_lib() + os.path.sep + path)
+
+
+def compile_qt_resources():
+    print("compiling QT resources...")
+    subprocess.call(["pyrcc5" + get_target_extension(), "-o", "resources.py", "./resources.qrc"])
+
+
 def get_extra_resources():
+    compile_qt_resources()
     includes = list()
     includes.append((get_distutils_path(), "lib/distutils"))
     if sys.platform == "darwin":
@@ -85,72 +94,74 @@ setup(
     },
     executables=[
         # DERIVA GUI(Qt5) Applications
-        Executable("../deriva-qt/deriva/qt/auth_agent/__main__.py",
+        Executable("./about.py",
+                   targetName="about-deriva-client-tools" + get_target_extension(),
+                   base=get_target_base(),
+                   shortcutName="About DERIVA Client Tools",
+                   shortcutDir="StartMenuFolder",
+                   icon="./resources/images/deriva-star.ico"),
+        Executable(get_installed_file_path("deriva/qt/auth_agent/__main__.py"),
                    targetName="deriva-auth" + get_target_extension(),
                    base=get_target_base(),
                    shortcutName="DERIVA Authentication Agent",
                    shortcutDir="StartMenuFolder",
-                   icon="../deriva-qt/deriva/qt/auth_agent/resources/images/keys.ico"),
-        Executable("../deriva-qt/deriva/qt/upload_gui/__main__.py",
+                   icon=get_installed_file_path("deriva/qt/auth_agent/resources/images/keys.ico")),
+        Executable(get_installed_file_path("deriva/qt/upload_gui/__main__.py"),
                    targetName="deriva-upload" + get_target_extension(),
                    base=get_target_base(),
                    shortcutName="DERIVA Upload Utility",
                    shortcutDir="StartMenuFolder",
-                   icon="../deriva-qt/deriva/qt/upload_gui/resources/images/upload.ico"),
+                   icon=get_installed_file_path("deriva/qt/upload_gui/resources/images/upload.ico")),
 
         # DERIVA CLI Applications
-        Executable("../deriva-py/deriva/config/acl_config.py",
+        Executable(get_installed_file_path("deriva/config/acl_config.py"),
                    targetName="deriva-acl-config" + get_target_extension(),
                    base="Console"),
-        Executable("../deriva-py/deriva/config/annotation_config.py",
+        Executable(get_installed_file_path("deriva/config/annotation_config.py"),
                    targetName="deriva-annotation-config" + get_target_extension(),
                    base="Console"),
-        Executable("../deriva-py/deriva/config/dump_catalog_annotations.py",
+        Executable(get_installed_file_path("deriva/config/dump_catalog_annotations.py"),
                    targetName="deriva-annotation-dump" + get_target_extension(),
                    base="Console"),
-        Executable("../deriva-py/deriva/config/rollback_annotation.py",
+        Executable(get_installed_file_path("deriva/config/rollback_annotation.py"),
                    targetName="deriva-annotation-rollback" + get_target_extension(),
                    base="Console"),
-        Executable("../deriva-py/deriva/core/hatrac_cli.py",
+        Executable(get_installed_file_path("deriva/core/hatrac_cli.py"),
                    targetName="deriva-hatrac-cli" + get_target_extension(),
                    base="Console"),
-        Executable("../deriva-py/deriva/transfer/upload/__main__.py",
+        Executable(get_installed_file_path("deriva/transfer/upload/__main__.py"),
                    targetName="deriva-upload-cli" + get_target_extension(),
                    base="Console"),
-        Executable("../deriva-py/deriva/transfer/download/__main__.py",
+        Executable(get_installed_file_path("deriva/transfer/download/__main__.py"),
                    targetName="deriva-download-cli" + get_target_extension(),
                    base="Console"),
-        Executable("../deriva-catalog-manage/deriva/utils/catalog/manage/dump_catalog.py",
+        Executable(get_installed_file_path("deriva/utils/catalog/manage/dump_catalog.py"),
                    targetName="deriva-catalog-dump" + get_target_extension(),
                    base="Console"),
-        Executable("../deriva-catalog-manage/deriva/utils/catalog/components/deriva_catalog.py",
+        Executable(get_installed_file_path("deriva/utils/catalog/components/deriva_catalog.py"),
                    targetName="deriva-catalog-config" + get_target_extension(),
                    base="Console"),
-        Executable("../deriva-catalog-manage/deriva/utils/catalog/manage/deriva_csv.py",
+        Executable(get_installed_file_path("deriva/utils/catalog/manage/deriva_csv.py"),
                    targetName="deriva-csv" + get_target_extension(),
                    base="Console"),
 
         # bdbag CLI Applications
-        Executable(get_python_lib() + "/bdbag/bdbag_cli.py",
+        Executable(get_installed_file_path("bdbag/bdbag_cli.py"),
                    targetName="bdbag" + get_target_extension(),
                    base="Console"),
-        Executable(get_python_lib() + "/bdbag/bdbag_utils.py",
+        Executable(get_installed_file_path("bdbag/bdbag_utils.py"),
                    targetName="bdbag-utils" + get_target_extension(),
                    base="Console"),
     ],
     requires=[
-        'cx_Freeze'
-    ],
-    install_requires=[
-        'deriva==0.8.2',
-        'deriva-qt==0.8.2',
-        'deriva-catalog-manage==0.3.0'
+        'cx_Freeze',
+        'markdown'
     ],
     license='GNU GPL 3.0',
     classifiers=[
         'Intended Audience :: Science/Research',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: GNU General Public License',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         "Operating System :: POSIX",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows",

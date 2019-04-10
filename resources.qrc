@@ -1,0 +1,9 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource prefix="/images">
+      <file alias="deriva-white.png">./resources/images/deriva-white.png</file>
+  </qresource>
+  <qresource prefix="/text">
+      <file alias="about.md">./resources/text/about.md</file>
+  </qresource>
+</RCC>
