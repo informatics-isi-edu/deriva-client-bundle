@@ -130,6 +130,7 @@ manager provided by the operating system instead of `pip`.
 
 ##### 2. Install other dependencies via `pip`:
 
+* __markdown__: `pip install markdown`
 * __bdbag__: `pip install bdbag[boto,globus]`
 
 `NOTE`: Do not forget to substitute `pip3` for `pip` if you are __NOT__
@@ -158,6 +159,7 @@ Build environment installation prerequisites:
 * __cx_Freeze__ >= 6.0b1: `pip install git+https://github.com/anthony-tuininga/cx_Freeze.git`
 * __PyQt5 WebEngine__: `pip install pyqtwebengine`
     * MacOSX Only: `ln -s <absolute path to venv basedir>/lib/python3.6/site-packages/PyQt5/Qt/lib/* <absolute path to venv basedir>/lib/`
+* __markdown__: `pip install markdown`
 * __bdbag__: `pip install bdbag[boto,globus]`
 * __deriva-py__: `pip install --upgrade git+https://github.com/informatics-isi-edu/deriva-py.git`
 * __deriva-qt__: `pip install --upgrade git+https://github.com/informatics-isi-edu/deriva-qt.git`
