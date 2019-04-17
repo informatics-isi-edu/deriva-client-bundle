@@ -14,11 +14,11 @@ official releases of these installers. The `deriva-client` package is a separate
 ### Am I in the right place?
 
 * If you are looking to download these installer packages, then you have 
-come to the right place. See [below](#installer-package-builds).
+come to the right place. See [below](#downloading-the-installer-packages).
 
 * If you are looking for the code that actually _builds_ the installer 
 packages and the relevant documentation, then you have come to the 
-right place. See the build guide [here](./building.md).
+right place. See [below](#building-the-installer-packages).
 
 * If you are looking for information about `deriva-client` itself 
 (like what it is and how to use it), then you have come to the _wrong_ place. 
