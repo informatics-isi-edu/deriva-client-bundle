@@ -1,3 +1,3 @@
 #!/bin/bash
 HOURS=360
-find  /lfs1/buildbot/public_html/deriva-client-bundle -maxdepth 1 -type f -mmin +$((60*${HOURS})) -exec rm -rf {} +
+find  /lfs1/buildbot/public_html/deriva-client-bundle/dev -maxdepth 1 -type f -mmin +$((60*${HOURS})) -exec rm -rf {} +
