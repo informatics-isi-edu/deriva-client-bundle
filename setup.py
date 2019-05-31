@@ -67,7 +67,7 @@ def get_bdist_msi_options():
 
 
 setup(
-    name='DERIVA Client Bundle',
+    name='DERIVA Client Tools',
     description='Bundled client application suite for the DERIVA Platform',
     url='https://github.com/informatics-isi-edu/deriva-client-bundle',
     maintainer='USC Information Sciences Institute, Informatics Systems Research Division',
@@ -134,6 +134,9 @@ setup(
                    base="Console"),
         Executable(get_installed_file_path("deriva/transfer/download/__main__.py"),
                    targetName="deriva-download-cli" + get_target_extension(),
+                   base="Console"),
+        Executable(get_installed_file_path("deriva/seo/sitemap_cli.py"),
+                   targetName="deriva-sitemap-cli" + get_target_extension(),
                    base="Console"),
         Executable(get_installed_file_path("deriva/utils/catalog/manage/dump_catalog.py"),
                    targetName="deriva-catalog-dump" + get_target_extension(),
