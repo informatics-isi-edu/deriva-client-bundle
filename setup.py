@@ -80,7 +80,7 @@ setup(
             "namespace_packages": ["deriva", "deriva.utils", "deriva.utils.catalog"],
             "packages": ["pkg_resources._vendor",
                          "bdbag.fetch.resolvers",
-                         "goodtables",
+                         "portalocker",
                          "boto3"],
             "includes": ["atexit",
                          "idna.idnadata",
