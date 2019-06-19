@@ -81,6 +81,7 @@ setup(
             "packages": ["pkg_resources._vendor",
                          "bdbag.fetch.resolvers",
                          "portalocker",
+                         "goodtables",
                          "boto3"],
             "includes": ["atexit",
                          "idna.idnadata",
