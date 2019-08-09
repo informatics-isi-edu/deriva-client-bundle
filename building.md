@@ -8,7 +8,7 @@ Build environment installation prerequisites:
     * A __Python 3.5.4__ or greater _virtualenv_ or _venv_
     
 * Common dependencies
-    * __cx_Freeze__ >= 6.0b1: `pip install git+https://github.com/anthony-tuininga/cx_Freeze.git`
+    * __cx_Freeze__ >= 6.0b1: `pip install git+https://github.com/anthony-tuininga/cx_Freeze.git@9e06b761740a9e93431ee7ea8d0b10f786446a6a`
     * __markdown__: `pip install markdown`
     * __PyQt5 WebEngine__: `pip install pyqtwebengine`
         
@@ -24,6 +24,7 @@ Build environment installation prerequisites:
         * `pip install deriva-client`
     2. GitHub source:   
         * __bdbag__: `pip install bdbag[boto,globus]`
+        * __Globus Native App login__: `pip install fair-research-login`
         * __deriva-py__: `pip install git+https://github.com/informatics-isi-edu/deriva-py.git`
         * __deriva-qt__: `pip install git+https://github.com/informatics-isi-edu/deriva-qt.git`
         * __deriva-catalog-manage__: `pip install git+https://github.com/informatics-isi-edu/deriva-catalog-manage.git`
