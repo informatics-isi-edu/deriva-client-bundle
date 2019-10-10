@@ -53,3 +53,8 @@ and this repository can be found [here](http://buildbot.isrd.isi.edu/~buildbot/d
 
 Documentation on how to build the installer packages on each supported 
 platform can be found [here](./building.md).
+
+### Release Procedure
+
+Documentation outlining the release procedure for `deriva-client` and 
+the corresponding installer packages can be found [here](./releasing.md).
