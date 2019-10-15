@@ -2,6 +2,8 @@
 
 [![Build Status: Windows](http://buildbot.isrd.isi.edu/badges/deriva-client-bundle-Windows.svg?left_text=Build%20Status:%20Windows)](http://buildbot.isrd.isi.edu/#/)
 [![Build Status: MacOSX](http://buildbot.isrd.isi.edu/badges/deriva-client-bundle-MacOS.svg?left_text=Build%20Status:%20MacOSX)](http://buildbot.isrd.isi.edu/#/)
+[![Github Latest Release Downloads](https://img.shields.io/github/downloads/informatics-isi-edu/deriva-client-bundle/latest/total.svg?maxAge=600)](https://github.com/informatics-isi-edu/deriva-client-bundle/releases/latest)
+
 
 The _DERIVA Client Tools_ ([`deriva-client`](https://github.com/informatics-isi-edu/deriva-client)) are a set of software packages 
 that allow users to interact with DERIVA platform servers. 
