@@ -159,13 +159,19 @@ setup(
                    targetName="deriva-csv" + get_target_extension(),
                    base="Console"),
 
-        # bdbag CLI Applications
+        # bdbag Applications
         Executable(get_installed_file_path("bdbag/bdbag_cli.py"),
                    targetName="bdbag" + get_target_extension(),
                    base="Console"),
         Executable(get_installed_file_path("bdbag/bdbag_utils.py"),
                    targetName="bdbag-utils" + get_target_extension(),
                    base="Console"),
+        Executable(get_installed_file_path("bdbag_gui/__main__.py"),
+                   targetName="bdbag-gui" + get_target_extension(),
+                   base=get_target_base(),
+                   shortcutName="BDBag GUI",
+                   shortcutDir="StartMenuFolder",
+                   icon=get_installed_file_path("bdbag_gui/images/bag.ico")),
     ],
     requires=[
         'cx_Freeze',
