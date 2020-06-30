@@ -59,6 +59,7 @@ def get_bdist_mac_options():
 
 def get_bdist_msi_options():
     return {
+        "all_users": True,
         "add_to_path": True,
         "upgrade_code": __version__,
         "target_name": "DERIVA-Client-Tools-%s-win" % __version__,
