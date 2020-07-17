@@ -41,6 +41,7 @@ def compile_qt_resources():
 def get_extra_resources():
     compile_qt_resources()
     includes = list()
+    includes.append((get_installed_file_path("deriva/core/schemas"), "deriva/core/schemas"))
     includes.append((get_distutils_path(), "lib/distutils"))
     if sys.platform == "darwin":
         includes.append(("./resources/MacOS/DERIVA Command Line Applications.terminal",
