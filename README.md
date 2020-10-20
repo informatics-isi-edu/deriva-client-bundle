@@ -57,8 +57,9 @@ The software can be installed as a system installation (for all users) or per-us
 System installations will require administrative privileges on the target system, whereas
 per-user installations will not. 
 
-* On MacOSX, the installer software will prompt the user for
-the type of installation desired. 
+* On MacOSX, users must click the `"Change Installation Location..."` and then select 
+`"Install for me only"` to perform a user installation. 
+
 * On Windows, the installer package defaults to user-mode 
 installation. There is no interactive installer prompt for a system installation, however, 
 a system installation can be performed via command line by using the `msiexec /i` command 
