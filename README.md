@@ -58,7 +58,8 @@ System installations will require administrative privileges on the target system
 per-user installations will not. 
 
 * On MacOSX, users must click the `"Change Installation Location..."` and then select 
-`"Install for me only"` to perform a user installation. 
+`"Install for me only"` to perform a user installation. The software will be installed 
+into the user's home directory in the subdirectory `Applications/DERIVA Client Tools`.
 
 * On Windows, the installer package defaults to user-mode 
 installation. There is no interactive installer prompt for a system installation, however, 
