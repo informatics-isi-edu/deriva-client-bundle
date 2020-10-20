@@ -42,7 +42,6 @@ def get_extra_resources():
     compile_qt_resources()
     includes = list()
     includes.append((get_installed_file_path("deriva/core/schemas"), "deriva/core/schemas"))
-    includes.append((get_distutils_path(), "lib/distutils"))
     if sys.platform == "darwin":
         includes.append(("./resources/MacOS/DERIVA Command Line Applications.terminal",
                          "DERIVA Command Line Applications.terminal"))
@@ -60,9 +59,9 @@ def get_bdist_mac_options():
 
 def get_bdist_msi_options():
     return {
-        "all_users": True,
+        "all_users": False,
         "add_to_path": True,
-        "upgrade_code": __version__,
+        "upgrade_code": "{c3c21b7a-7dd4-43c0-a2b8-6f7185c174a5}",
         "target_name": "DERIVA-Client-Tools-%s-win" % __version__,
         "install_icon": "resources\\images\\deriva-star.ico"
     }
@@ -79,7 +78,6 @@ setup(
     options={
         "build_exe": {
             "optimize": 1,
-            "namespace_packages": ["deriva", "deriva.utils", "deriva.utils.catalog"],
             "packages": ["pkg_resources._vendor",
                          "bdbag.fetch.resolvers",
                          "portalocker",
@@ -91,7 +89,7 @@ setup(
                          "html.parser",
                          "globus_sdk"],
             "include_files": get_extra_resources(),
-            "excludes": ["tkinter", "numpy", "scipy", "pandas", "distutils"],
+            "excludes": ["tkinter", "numpy", "scipy", "pandas"],
         },
         "bdist_msi": get_bdist_msi_options(),
         "bdist_mac": get_bdist_mac_options()
@@ -196,5 +194,3 @@ setup(
         'Programming Language :: Python :: 3.7'
     ]
 )
-
-

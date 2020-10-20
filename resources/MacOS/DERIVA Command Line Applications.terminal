@@ -11,7 +11,7 @@
 	cnR2e4aPl5qjtbi9AAAAAAAAAQEAAAAAAAAAGQAAAAAAAAAAAAAAAAAAAL8=
 	</data>
 	<key>CommandString</key>
-	<string>export PATH="$PATH:/Applications/DERIVA Client Tools/DERIVA Client Tools.app/Contents/MacOS"</string>
+	<string>export PATH="$PATH:$HOME/Applications/DERIVA Client Tools/DERIVA Client Tools.app/Contents/MacOS:/Applications/DERIVA Client Tools/DERIVA Client Tools.app/Contents/MacOS"</string>
 	<key>CursorBlink</key>
 	<true/>
 	<key>CursorColor</key>

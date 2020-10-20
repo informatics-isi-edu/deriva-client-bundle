@@ -8,8 +8,8 @@ Build environment installation prerequisites:
     * A __Python 3.5.4__ or greater _virtualenv_ or _venv_
     
 * Common dependencies
-    * __cx_Freeze__ >= 6.0b1: `pip install git+https://github.com/anthony-tuininga/cx_Freeze.git@9e06b761740a9e93431ee7ea8d0b10f786446a6a`
-    * __markdown__: `pip install markdown`
+    * __cx_Freeze__ >= 6.3: `pip install cx_Freeze>=6.3`
+    * __markdown__: `pip install markdown==3.2.1`
     * __PyQt5 WebEngine__: `pip install pyqtwebengine`
         
 * MacOSX Only:
