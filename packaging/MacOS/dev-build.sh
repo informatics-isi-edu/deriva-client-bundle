@@ -5,9 +5,7 @@ rm -rf ./deriva-client-bundle-dev
 python3 -m venv deriva-client-bundle-dev
 cd deriva-client-bundle-dev
 source ./bin/activate
-#python -m pip install --upgrade pip wheel markdown==3.2.1 setuptools cx_Freeze>=6.5.3
-python -m pip install --upgrade pip wheel markdown==3.2.1 setuptools
-pip install git+https://github.com/marcelotduarte/cx_Freeze.git
+python -m pip install --upgrade pip wheel setuptools "markdown==3.2.1" "cx_Freeze>=6.5.3"
 pip install "PyQtWebEngine>=5.15"
 pip install setuptools_scm
 pip install bdbag[boto,globus]
