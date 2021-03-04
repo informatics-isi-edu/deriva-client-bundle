@@ -1,3 +1,4 @@
+import os
 import sys
 import markdown
 from PyQt5.QtCore import Qt, QMetaObject, QFile, QIODevice
