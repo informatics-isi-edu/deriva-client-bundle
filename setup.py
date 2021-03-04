@@ -53,7 +53,6 @@ def get_bdist_mac_options():
         "iconfile": "./resources/images/deriva-star.icns",
         "custom_info_plist": "./resources/MacOS/Info.plist",
         "bundle_name": "DERIVA Client Tools",
-        "rpath_lib_folder": sys.prefix + "/lib"
     }
 
 
@@ -74,7 +73,7 @@ setup(
     maintainer='USC Information Sciences Institute, Informatics Systems Research Division',
     maintainer_email='isrd-support@isi.edu',
     version=__version__,
-    python_requires='>3.5.2',
+    python_requires='>3.7',
     options={
         "build_exe": {
             "optimize": 1,

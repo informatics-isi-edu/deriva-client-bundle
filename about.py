@@ -8,6 +8,14 @@ from PyQt5.QtWebEngineWidgets import QWebEngineView
 from version import __version__ as VERSION
 import resources
 
+if sys.platform == "darwin":
+    if getattr(sys, "frozen", False) and getattr(sys, "executable", False):
+        executableDir = os.path.join(os.path.dirname(sys.executable))
+        webEngineProcessLocation = os.path.join(executableDir, 'lib', 'PyQt5', 'Qt', 'lib',
+                                                'QtWebEngineCore.framework', 'Helpers', 'QtWebEngineProcess.app',
+                                                'Contents', 'MacOS', 'QtWebEngineProcess')
+        os.environ['QTWEBENGINEPROCESS_PATH'] = webEngineProcessLocation
+
 
 class AboutWindow(QMainWindow):
 
