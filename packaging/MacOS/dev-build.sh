@@ -18,6 +18,7 @@ pip install deriva-catalog-manage[csv]@git+https://github.com/informatics-isi-ed
 git clone https://github.com/informatics-isi-edu/deriva-client-bundle
 cd deriva-client-bundle
 export DERIVA_CLIENT_BUNDLE_VERSION=`python ./version.py`
+echo ${DERIVA_CLIENT_BUNDLE_VERSION} > deriva-client-bundle-version.txt
 python setup.py bdist_mac
 cp -R "./build/DERIVA Client Tools.app/Contents/MacOS/lib/PyQt5/Qt/lib/QtWebEngineCore.framework/Resources"/* "./build/DERIVA Client Tools.app/Contents/MacOS"
 codesign --remove-signature "./build/DERIVA Client Tools.app/Contents/MacOS/lib/Python"
