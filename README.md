@@ -66,7 +66,7 @@ installation. There is no interactive installer prompt for a system installation
 a system installation can be performed via command line by using the `msiexec /i` command 
 and then the path to the installer package, followed by the flag `ALLUSERS=1`. For example:
     ```sh
-    msiexec /i DERIVA-Client-Tools-1.4.1-win-amd64.msi ALLUSERS=1
+    msiexec /i DERIVA-Client-Tools-1.4.5-win-amd64.msi ALLUSERS=1
     ```
 
 ### Building the Installer Packages
