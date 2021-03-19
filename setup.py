@@ -113,6 +113,12 @@ setup(
                    shortcutName="DERIVA Upload Utility",
                    shortcutDir="StartMenuFolder",
                    icon=get_installed_file_path("deriva/qt/upload_gui/resources/images/upload.ico")),
+        Executable(get_installed_file_path("deriva/workbench/__main__.py"),
+                   targetName="deriva-workbench" + get_target_extension(),
+                   base=get_target_base(),
+                   shortcutName="DERIVA Schema Workbench",
+                   shortcutDir="StartMenuFolder",
+                   icon=get_installed_file_path("deriva/workbench/icons/workbench.ico")),
 
         # DERIVA CLI Applications
         Executable(get_installed_file_path("deriva/config/acl_config.py"),

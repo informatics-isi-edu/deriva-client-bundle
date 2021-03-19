@@ -7,7 +7,7 @@ cd deriva-client-bundle-dev
 source ./bin/activate
 python -m pip install --upgrade pip wheel setuptools
 pip install "markdown==3.2.1" "cx_Freeze>=6.5.3"
-pip install "PyQtWebEngine>=5.15"
+pip install "PyQtWebEngine>=5.15.4"
 pip install setuptools_scm
 pip install bdbag[boto,globus]
 pip install bdbag_gui
@@ -15,6 +15,7 @@ pip install fair-research-login
 pip install fair-identifiers-client
 pip install git+https://github.com/informatics-isi-edu/deriva-py.git
 pip install git+https://github.com/informatics-isi-edu/deriva-qt.git
+pip install git+https://github.com/informatics-isi-edu/deriva-workbench.git
 pip install deriva-catalog-manage[csv]@git+https://github.com/informatics-isi-edu/deriva-catalog-manage.git
 git clone https://github.com/informatics-isi-edu/deriva-client-bundle
 cd deriva-client-bundle
