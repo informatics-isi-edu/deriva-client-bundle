@@ -22,7 +22,7 @@ cd deriva-client-bundle
 export DERIVA_CLIENT_BUNDLE_VERSION=`python ./version.py`
 echo ${DERIVA_CLIENT_BUNDLE_VERSION} > ./deriva-client-bundle-version.txt
 python setup.py bdist_mac
-cp -R "./build/DERIVA Client Tools.app/Contents/MacOS/lib/PyQt5/Qt/lib/QtWebEngineCore.framework/Resources"/* "./build/DERIVA Client Tools.app/Contents/MacOS"
+cp -R "./build/DERIVA Client Tools.app/Contents/MacOS/lib/PyQt5/Qt5/lib/QtWebEngineCore.framework/Resources"/* "./build/DERIVA Client Tools.app/Contents/MacOS"
 codesign --remove-signature "./build/DERIVA Client Tools.app/Contents/MacOS/lib/Python"
 packagesbuild --verbose "./packaging/MacOS/Deriva Client Tools.pkgproj"
 hdiutil create -fs HFSX -format UDZO -imagekey zlib-level=9 -srcfolder "./build/Deriva Client Tools.mpkg" -volname "DERIVA Client Tools-${DERIVA_CLIENT_BUNDLE_VERSION}" ./build/DERIVA-Client-Tools-${DERIVA_CLIENT_BUNDLE_VERSION}-osx
