@@ -12,8 +12,9 @@ import resources
 if sys.platform == "darwin":
     if getattr(sys, "frozen", False) and getattr(sys, "executable", False):
         executableDir = os.path.join(os.path.dirname(sys.executable))
-        os.path.join(executableDir, 'lib', 'PyQt5', 'Qt5', 'lib', 'QtWebEngineCore.framework', 'Helpers',
-                     'QtWebEngineProcess.app', 'Contents', 'MacOS', 'QtWebEngineProcess')
+        webEngineProcessLocation = os.path.join(executableDir, 'lib', 'PyQt5', 'Qt5', 'lib',
+                                                'QtWebEngineCore.framework', 'Helpers', 'QtWebEngineProcess.app',
+                                                'Contents', 'MacOS', 'QtWebEngineProcess')
         os.environ['QTWEBENGINEPROCESS_PATH'] = webEngineProcessLocation
 
 
