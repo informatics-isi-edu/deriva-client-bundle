@@ -1,3 +1,4 @@
 markdown==3.2.1
 deriva-client==1.5.0
-deriva-catalog-manage[csv]==0.8.1
+deriva-catalog-manage[csv]==0.9.0
+deriva-workbench==0.1.0
