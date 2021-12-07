@@ -5,7 +5,7 @@ rm -rf ./deriva-client-bundle-release
 python3 -m venv deriva-client-bundle-release
 cd deriva-client-bundle-release
 source ./bin/activate
-python -m pip install --upgrade pip wheel setuptools
+python -m pip install --upgrade pip wheel "setuptools<=57.5.0"
 pip install "markdown==3.2.1" "cx_Freeze>=6.5.3"
 pip install setuptools_scm
 pip install deriva-client

@@ -5,11 +5,12 @@ rm -rf ./deriva-client-bundle-dev
 python3 -m venv deriva-client-bundle-dev
 cd deriva-client-bundle-dev
 source ./bin/activate
-python -m pip install --upgrade pip wheel setuptools
+python -m pip install --upgrade pip wheel "setuptools<=57.5.0"
 pip install "markdown==3.2.1" "cx_Freeze>=6.5.3"
 pip install "PyQtWebEngine>=5.15.4"
 pip install setuptools_scm
-pip install bdbag[boto,globus]
+pip install bdbag[boto]
+pip install "globus_sdk<4"
 pip install bdbag_gui
 pip install minid
 pip install fair-research-login
