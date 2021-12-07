@@ -11,6 +11,7 @@ pip install "PyQtWebEngine>=5.15.4"
 pip install setuptools_scm
 pip install bdbag[boto,globus]
 pip install bdbag_gui
+pip install minid
 pip install fair-research-login
 pip install fair-identifiers-client
 pip install git+https://github.com/informatics-isi-edu/deriva-py.git
