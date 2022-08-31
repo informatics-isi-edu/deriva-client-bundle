@@ -6,7 +6,7 @@ python3 -m venv deriva-client-bundle-release
 cd deriva-client-bundle-release
 source ./bin/activate
 python -m pip install --upgrade pip wheel "setuptools<=57.5.0"
-pip install "markdown==3.2.1" "cx_Freeze>=6.5.3"
+pip install "markdown==3.2.1" "cx_Freeze<6.11"
 pip install setuptools_scm
 pip install deriva-client
 pip install deriva-catalog-manage[csv]
