@@ -77,8 +77,7 @@ setup(
     options={
         "build_exe": {
             "optimize": 1,
-            "packages": ["pkg_resources._vendor",
-                         "bdbag.fetch.resolvers",
+            "packages": ["bdbag.fetch.resolvers",
                          "portalocker",
                          "goodtables",
                          "boto3",
@@ -135,6 +134,9 @@ setup(
                    base="Console"),
         Executable(get_installed_file_path("deriva/config/annotation_validate.py"),
                    target_name="deriva-annotation-validate" + get_target_extension(),
+                   base="Console"),
+        Executable(get_installed_file_path("deriva/core/catalog_cli.py"),
+                   target_name="deriva-catalog-cli" + get_target_extension(),
                    base="Console"),
         Executable(get_installed_file_path("deriva/core/hatrac_cli.py"),
                    target_name="deriva-hatrac-cli" + get_target_extension(),

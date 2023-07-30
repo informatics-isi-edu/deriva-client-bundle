@@ -8,7 +8,7 @@ Build environment installation prerequisites:
     * A __Python 3.7.6__ or greater _virtualenv_ or _venv_
     
 * Common dependencies
-    * __cx_Freeze__ >= 6.3: `pip install cx_Freeze>=6.5`
+    * __cx_Freeze__ >= 6.5: `pip install cx_Freeze>=6.5`
     * __markdown__: `pip install markdown==3.2.1`
     * __PyQt5 WebEngine__: `pip install pyqtwebengine`
         
