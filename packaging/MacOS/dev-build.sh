@@ -7,7 +7,7 @@ cd deriva-client-bundle-dev
 source ./bin/activate
 python -m pip install --upgrade pip wheel "setuptools<=57.5.0"
 pip install "markdown==3.2.1" "cx_Freeze<6.11"
-pip install "PyQtWebEngine>=5.15.4"
+pip install "PyQt5<=5.15.9" "PyQtWebEngine>=5.15.4"
 pip install "cryptography<39.0.0"
 pip install setuptools_scm
 pip install bdbag[boto]
