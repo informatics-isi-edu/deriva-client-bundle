@@ -158,15 +158,6 @@ setup(
         Executable(get_installed_file_path("deriva/core/utils/globus_auth_utils.py"),
                    target_name="deriva-globus-auth-utils" + get_target_extension(),
                    base="Console"),
-        Executable(get_installed_file_path("deriva/utils/catalog/manage/dump_catalog.py"),
-                   target_name="deriva-catalog-dump" + get_target_extension(),
-                   base="Console"),
-        Executable(get_installed_file_path("deriva/utils/catalog/components/deriva_catalog.py"),
-                   target_name="deriva-catalog-config" + get_target_extension(),
-                   base="Console"),
-        Executable(get_installed_file_path("deriva/utils/catalog/manage/deriva_csv.py"),
-                   target_name="deriva-csv" + get_target_extension(),
-                   base="Console"),
 
         # bdbag Applications
         Executable(get_installed_file_path("bdbag/bdbag_cli.py"),
