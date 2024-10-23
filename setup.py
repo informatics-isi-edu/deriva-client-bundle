@@ -79,7 +79,6 @@ setup(
             "optimize": 1,
             "packages": ["bdbag.fetch.resolvers",
                          "portalocker",
-                         "goodtables",
                          "boto3",
                          "fair_research_login"],
             "includes": ["atexit",
