@@ -17,10 +17,8 @@ pip install minid
 pip install fair-research-login
 pip install fair-identifiers-client
 pip install git+https://github.com/informatics-isi-edu/deriva-py.git
-pip install git+https://github.com/informatics-isi-edu/chisel.git
 pip install git+https://github.com/informatics-isi-edu/deriva-qt.git
 pip install git+https://github.com/informatics-isi-edu/deriva-workbench.git
-pip install deriva-catalog-manage[csv]@git+https://github.com/informatics-isi-edu/deriva-catalog-manage.git
 git clone https://github.com/informatics-isi-edu/deriva-client-bundle
 cd deriva-client-bundle
 export DERIVA_CLIENT_BUNDLE_VERSION=`python ./version.py`

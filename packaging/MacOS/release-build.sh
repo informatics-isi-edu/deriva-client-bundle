@@ -11,7 +11,6 @@ pip install "cryptography<39.0.0"
 pip install "PyQt5==5.15.9" "PyQt5-Qt5==5.15.2" "PyQtWebEngine==5.15.4"
 pip install setuptools_scm
 pip install deriva-client
-pip install deriva-catalog-manage[csv]
 git clone https://github.com/informatics-isi-edu/deriva-client-bundle
 cd deriva-client-bundle
 export DERIVA_CLIENT_BUNDLE_VERSION=`python ./version.py`
