@@ -11,13 +11,10 @@ import os
 import sys
 import opcode
 import subprocess
-import globus_sdk
 from distutils.sysconfig import get_python_lib
 from cx_Freeze import setup, Executable
 
 from version import __version__
-
-globus_sdk._force_eager_imports()
 
 def get_target_base():
     return "Win32GUI" if sys.platform == "win32" else None
@@ -86,8 +83,7 @@ setup(
                          "globus_sdk"],
             "includes": ["atexit",
                          "idna.idnadata",
-                         "html.parser",
-                         "globus_sdk"],
+                         "html.parser"],
             "include_files": get_extra_resources(),
             "excludes": ["tkinter", "numpy", "scipy", "pandas"],
         },
