@@ -1,3 +1,3 @@
 markdown==3.2.1
-deriva-client==1.7.4
+deriva-client==1.7.9
 deriva-workbench==0.1.2
